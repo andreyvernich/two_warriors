@@ -12,12 +12,8 @@ public class Main {
         while (warr1.health > 0 && warr2.health > 0) {
             int randomInt = random.nextInt(2);
             switch (randomInt) {
-                case 0 -> {
-                    warr1.toAttack(warr2);
-                }
-                case 1 -> {
-                    warr2.toAttack(warr1);
-                }
+                case 0 -> warr1.toAttack(warr2);
+                case 1 -> warr2.toAttack(warr1);
             }
         }
         if (warr2.health == 0) {
