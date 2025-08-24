@@ -1,13 +1,25 @@
 public class Warrior {
-    String name;
-    int health = 100;
+    private final String name;
+    private int health = 100;
 
     public Warrior(String name) {
         this.name = name;
     }
-    public void toAttack (Warrior warrior) {
-        warrior.health = warrior.health - 20;
-        System.out.println(name + " attack " + warrior.name + ". " + warrior.name + " health: " + warrior.health);
+    public void attack(Warrior warrior) {
+        warrior.setHealth(warrior.getHealth() - 20);
+        System.out.println(name + " attack " + warrior.getName() + ". " + warrior.getName() + " health: " + warrior.getHealth());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 }
 
